@@ -39,3 +39,14 @@ public:
     void setX(int value); // mutator function
     void print(); // normal member function
 };
+
+more over ,
+overload constructor is also paramized constructor:
+here's the code:
+class MyClass {
+    int x;
+    string name;
+public:
+    MyClass(int value, string n) { x = value; name = n;} // parameterized constructor
+};
+
