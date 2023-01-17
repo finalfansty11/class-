@@ -1,0 +1,41 @@
+/*
+A class can have several types of member functions, including:
+
+Constructors: special member functions that are executed automatically whenever an object of that class is created. They are used to initialize the state of an object when it's created.
+
+Destructors: special member functions that are executed automatically when an object goes out of scope or is deleted. They are used to release resources, such as memory, that were allocated by the object.
+
+Copy constructor: special member function that are executed when an object of the class is created as a copy of another object.
+
+Copy assignment operator: special member function that are executed when an object of the class is assigned a value from another object.
+
+Move constructor: special member function that are executed when an object of the class is created by moving another object.
+
+Move assignment operator: special member function that are executed when an object of the class is assigned a value by moving another object.
+
+operator overloading: special member functions that are used to overload operators such as +, -, *, /, etc.
+
+Conversion functions: special member functions that are used to convert objects of a class to other types
+
+Accessor functions: member functions that are used to access the private data members of a class
+
+Mutator functions: member functions that are used to change the private data members of a class
+
+Normal member functions: member functions that perform some specific operation or calculation on the data members of a class.
+*/
+
+Here is an example of a class with all these types of member functions:
+class MyClass {
+    int x;
+public:
+    MyClass(); //default constructor
+    MyClass(int value); //overloaded constructor
+    MyClass(const MyClass &obj); // copy constructor
+    MyClass& operator=(const MyClass &obj); // copy assignment operator
+    MyClass(MyClass &&obj); // move constructor
+    MyClass& operator=(MyClass &&obj); // move assignment operator
+    ~MyClass(); // destructor
+    int getX() const; // accessor function
+    void setX(int value); // mutator function
+    void print(); // normal member function
+};
